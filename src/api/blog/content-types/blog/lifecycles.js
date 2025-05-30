@@ -97,9 +97,9 @@ module.exports = {
         data: { mailchimpSynced: true },
       });
 
-      strapi.log.info(`✅ Mailchimp campaign created for blog: ${title}`);
+      strapi.log.info(` Mailchimp campaign created for blog: ${title}`);
     } catch (err) {
-      strapi.log.error('❌ Mailchimp API error', err.response?.data || err.message);
+      strapi.log.error(' Mailchimp API error', err.response?.data || err.message);
     }
   },
 };
