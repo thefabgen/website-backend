@@ -32,7 +32,7 @@ module.exports = {
           settings: {
             subject_line: `New Blog: ${title}`,
             title: `Auto: ${title}`,
-            from_name: 'Your Blog Name',
+            from_name: 'thefabgen',
             reply_to: 'your@email.com',
           }
         },

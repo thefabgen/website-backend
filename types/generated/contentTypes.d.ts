@@ -420,10 +420,15 @@ export interface ApiContributionContribution
     draftAndPublish: true;
   };
   attributes: {
+    birthYear: Schema.Attribute.BigInteger & Schema.Attribute.Required;
+    country: Schema.Attribute.String & Schema.Attribute.Required;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     email: Schema.Attribute.Email & Schema.Attribute.Required;
+    firstName: Schema.Attribute.String & Schema.Attribute.Required;
+    firstNameOnly: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    lastName: Schema.Attribute.String & Schema.Attribute.Required;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -431,7 +436,10 @@ export interface ApiContributionContribution
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
+    social: Schema.Attribute.Text;
+    source: Schema.Attribute.String & Schema.Attribute.Required;
     text: Schema.Attribute.RichText;
+    title: Schema.Attribute.Text;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
