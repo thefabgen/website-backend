@@ -18,7 +18,9 @@ module.exports = {
       const apiKey = process.env.MAILCHIMP_API_KEY;
       const serverPrefix = process.env.MAILCHIMP_SERVER_PREFIX;
       const listId = process.env.MAILCHIMP_LIST_ID;
-
+      console.log(' Mailchimp API Key:', apiKey);
+      console.log(' Mailchimp Server Prefix:', serverPrefix);
+      console.log(' Mailchimp List ID:', listId);
       // 1. Create campaign
       const campaignRes = await axios.post(
         `https://${serverPrefix}.api.mailchimp.com/3.0/campaigns`,
