@@ -6,8 +6,6 @@ module.exports = {
 
     const title = result.title;
     const slug = result.slug;
-    const blogUrl = `https://your-frontend-domain.com/blog/${slug}`;
-    const description = result.description || '';
     const publishedAt = result.publishedAt;
 
     // Only send to Mailchimp if blog is published and not already synced
@@ -20,9 +18,6 @@ module.exports = {
       const apiKey = process.env.MAILCHIMP_API_KEY;
       const serverPrefix = process.env.MAILCHIMP_SERVER_PREFIX;
       const listId = process.env.MAILCHIMP_LIST_ID;
-      console.log(' Mailchimp API Key:', apiKey);
-      console.log(' Mailchimp Server Prefix:', serverPrefix);
-      console.log(' Mailchimp List ID:', listId);
 
       // 1. Create campaign
       const campaignRes = await axios.post(
@@ -34,9 +29,9 @@ module.exports = {
           },
           settings: {
             subject_line: `New Blog: ${title}`,
-            title: `Auto: ${title}`,
+            title: `New Blog Added: ${title}`,
             from_name: 'thefabgen',
-            reply_to: 'your@email.com',
+            reply_to: 'thefabulousgen@gmail.com',
           }
         },
         {
