@@ -10,7 +10,7 @@ module.exports = {
 
     // Only send to Mailchimp if blog is published and not already synced
     if (!publishedAt || result.mailchimpSynced) {
-      strapi.log.info('⏩ Skipping Mailchimp sync: either not published or already synced.');
+      strapi.log.info(' Skipping Mailchimp sync: either not published or already synced.');
       return;
     }
 
