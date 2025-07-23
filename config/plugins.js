@@ -10,8 +10,8 @@ module.exports = ({ env }) => ({
           pass: env('SMTP_PASSWORD'),
         },
         settings: {
-          defaultFrom: "thefabulousgen@gmail.com",
-          defaultReplyTo: "thefabulousgen@gmail.com",
+          defaultFrom: "no-reply@strapiapp.com",
+          defaultReplyTo: "gautamroshan4004@gmail.com",
         }
       }
     },

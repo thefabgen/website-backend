@@ -61,6 +61,7 @@ module.exports = {
 
       await emailService.send({
         to: 'thefabulousgen@gmail.com',
+        from: 'thefabulousgen@gmail.com',
         subject: `📝 New Contribution Submitted: ${result.title || 'Untitled'}`,
         html: html,
       });
