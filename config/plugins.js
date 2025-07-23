@@ -9,6 +9,10 @@ module.exports = ({ env }) => ({
           user: env('SMTP_USERNAME'),
           pass: env('SMTP_PASSWORD'),
         },
+        settings: {
+          defaultFrom: env('SENDGRID_EMAIL_FROM'),
+          defaultTo: env('SENDGRID_EMAIL_FROM'),
+        }
       }
     },
   },
