@@ -69,7 +69,7 @@ module.exports = {
       strapi.log.info('✅ Contribution notification email sent to client.');
 
     } catch (err) {
-      strapi.log.error('❌ Failed to send contribution email', err.message);
+      strapi.log.error('❌ Failed to send contribution email', err);
     }
   },
 };
