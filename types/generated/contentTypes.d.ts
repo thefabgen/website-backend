@@ -417,7 +417,7 @@ export interface ApiContributionContribution
     singularName: 'contribution';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   attributes: {
     birthYear: Schema.Attribute.BigInteger & Schema.Attribute.Required;
